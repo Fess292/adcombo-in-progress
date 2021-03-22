@@ -77,51 +77,78 @@
         li         
             button:before
                 font-size: 38px
-            &:last-child
-                display: none !important
-    .slick-prev, .slick-next, button
+            
+    .slick-prev, .slick-next, button, .slick-arrow
         top: 91.5%
+        transition: none
+
     .slick-prev
         left: 10%
-        background-image: url("../icons/arrow_left.png")
+        background: url("../icons/arrow_left.png") no-repeat
         &:before
             content:'' !important
             
     .slick-next
-        right: 20%
-        background-image: url("../icons/arrow_right.png")
+        right: 14px
+        top: 1px
+        background: url("../icons/arrow_right.png") no-repeat
+
 
 .spoiler
     padding-top: 40px
     background: #F8FBFF
     h2,p 
         margin-top: 16px
-    &_wrapper
+    &-wrapper
         margin-top: 31px
-        padding-right: 35px
+        
         h3
             margin-top: 16px
             text-align: left
+            padding-right: 35px
         p
-            text-align: left  
-        
-    .ui-accordion-header.ui-state-active
-        color: #00C368
+            text-align: left 
+            border-bottom: 1px solid #E7EBF0 
+            padding-right: 35px
+    &-wrapper__item
+        position: relative
+        .spoiler_icons
+            margin-right: 24px
+            padding: 10px    
+        &::after
+            content: url(../img/arrow_down.png)
+            font-size: 18px
+            margin-left: 4px
+            position: absolute
+            right: 0
+            top: 0
+.spoiler-wrapper__description
+    display: none
 
-    .ui-accordion-header-collapsed, .spoiler_item
-        border-bottom: 1px solid #E7EBF0
+.active 
+    display: block
+.active-arrow
+    display: block
+    color: #00C368
+    &::after 
+        content: url(../img/arrow_up.png)            
+    // .ui-accordion-header.ui-state-active
+    //     color: #00C368
 
-    .ui-icon-zoomin
-        background-image: url('../img/arrow_down.png')
-        background-size: 20px
-        width: 20px
-        height: 20px
+    // .ui-accordion-header-collapsed, .spoiler_item
+    //     border-bottom: 1px solid #E7EBF0
 
-    .ui-icon-zoomout
-        background: url('../img/arrow_up.png')
-        background-size: 20px
-        width: 20px
-        height: 20px
+    // .ui-icon-zoomin
+    //     background-image: url('../img/arrow_up.png')
+    //     background-size: 20px
+    //     width: 20px
+    //     height: 20px
+
+    // .ui-icon-zoomout
+    //     background: url('../img/arrow_downup.png')
+    //     background-size: 20px
+    //     width: 20px
+    //     height: 20px
 
 .feed
     padding: 47px 0 36px 0
@@ -172,8 +199,63 @@
         .last_img
             float: right
             margin: 0 0 0 15px
-        
+
+// .content 
+//     &-image 
+//         display: inline-block
+//         &::before 
+//             content: '\1F493'
+//             width: 40px
+//             height: 40px
+//             background: #ccc
+//             border-radius: 50%
+//             display: inline-block
+//             text-align: center
+//             padding: 7px 0
     
+  
+//     &-header 
+//         display: inline-block
+//         vertical-align: middle
+//         margin-left: 10px
+  
+//     &-arrow 
+//         display: inline-block
+//         &::before 
+//             content: '\02C4'
+//             width: 40px
+//             height: 40px
+//             display: inline-block
+    
+  
+     
+
+// .spoiler-wrapper__item
+//     position: relative
+//     .spoiler_icons
+//         margin-right: 24px
+//         padding: 10px
+//     &::after
+//         content: url(../img/arrow_down.png)
+//         font-size: 18px
+//         margin-left: 4px
+//         position: absolute
+//         right: 0
+//         top: 0
+
+// .spoiler-wrapper__description
+//     display: none
+
+// .active 
+//     display: block
+// .active-arrow
+//     display: block
+//     color: #00C368
+//     &::after 
+//         content: url(../img/arrow_up.png)
+
+
+
             
         
     

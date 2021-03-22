@@ -46,7 +46,7 @@ $(document).ready(function(){
         // }
         // ]
 
-});
+});   
 $( '.spoiler_wrapper' ).accordion({
     collapsible:true,
     autoHeight:false,
@@ -60,5 +60,22 @@ $( '.spoiler_wrapper' ).accordion({
 })
 $('button').button();
     
+
+const spoilerWrapperItems = document.querySelectorAll('.spoiler-wrapper__item');
+
+let activePanel;
+spoilerWrapperItems.forEach(function(item, i, panelItem) {
+  item.addEventListener('click', function(e) {
+    this.classList.add('active-arrow');
+    this.nextElementSibling.classList.add('active');
+
+    if (activePanel) {
+      activePanel.classList.remove('active-arrow');
+      activePanel.nextElementSibling.classList.remove('active');
+    }
+    activePanel = (activePanel === this) ? 0 : this;
+  });
+});
+
 
 });

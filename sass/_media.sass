@@ -2,10 +2,11 @@
     .carousel
         .devider
             display: none
-    nav
+    nav, .carousel-desktop
         display: none
-    .spoiler_icons
-        display: none
+    // .spoiler_icons
+    //     display: none
+    
     
     
 @media (min-width: 576px)
@@ -72,6 +73,8 @@
             width: 50%
             margin: 0 auto
             // margin-top: 12px
+        .red 
+            color: red
         h3
             padding: 18px 0 16px 0
             position: relative
@@ -79,19 +82,19 @@
             &::before
                 position: absolute
                 z-index: -1
-                content: ''
+                content: url(../img/Group_4-1.png)
                 width: 40px
                 height: 40px
                 background: #E7EBF0
                 border-radius: 40px
                 top: 21px
                 left: 2px
-            &::after
-                content: "!"
+            // &::after
+            //     content: "!"
         &_wrapper
-            .spoiler_icons
-                margin-right: 24px
-                padding: 10px
+            // .spoiler_icons
+            //     margin-right: 24px
+            //     padding: 10px
         p
             margin-top: 0
      
@@ -164,7 +167,35 @@
             li
                 margin-right: 61px
     .carousel
-        background: linear-gradient(111.04deg, #E2E2E2 0.39%, rgba(255, 255, 255, 0) 86.46%);
+        display: none
+    .carousel-desktop
+        background: linear-gradient(111.04deg, #E2E2E2 0.39%, rgba(255, 255, 255, 0) 86.46%)
+        .devider
+            display: block
+            margin-top: 75px
+        h2
+            margin-top: 22px
+        &_wrapper
+            width: 800px
+            margin-top: 29px
+            
+            margin: 0 auto
+            column-count: 3
+            column-gap: 0
+            break-inside: avoid
+            // .line-1
+            //     display: inline-block
+            // .line-2
+            //     display: inline-block
+        &_item
+            width: 176px
+        &_img
+            margin: 0 auto
+            width: 56px
+            // height: 72px
+        &_descr
+
+
         .container
             
             position: relative
@@ -181,6 +212,7 @@
                 // left: 361.78px
                 // top: 490px
                 bottom: -43px
+        
     .spoiler
         padding-top: 103px
         h2
