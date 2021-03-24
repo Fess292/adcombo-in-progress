@@ -2,18 +2,29 @@
     .carousel
         .devider
             display: none
-    nav, .carousel-desktop
+    nav, .carousel-desktop, .spoiler-wrapper__image
         display: none
+    .bx-wrapper
+            margin: 0 auto
     // .spoiler_icons
     //     display: none
+    // .bx-wrapper
+    //     img
+    //         margin: 0 auto
     
     
     
 @media (min-width: 576px)
     .container
         min-width: 540px
-    .spoiler_wrapper
+    
+    .spoiler-wrapper
         padding-left: 5%
+        .title_16b
+            line-height: 30px
+    .spoiler-wrapper__item
+        &::after 
+            top: 6px
     .feed
         &_item-1
             .feed_logo
@@ -63,44 +74,82 @@
         .devider
             display: block
             margin-top: 75px
+        .bx-wrapper 
+            margin: 0 auto
     .spoiler
+        &-wrapper__image
+            display: inline-block
+            float: left
         .devider
             margin-top: 98px
         h2
+            
             font-weight: bold
             font-size: 40px
             line-height: 64px
             width: 50%
             margin: 0 auto
             // margin-top: 12px
-        .red 
-            color: red
+
         h3
-            padding: 18px 0 16px 0
-            position: relative
+            padding: 18px 0 16px 74px
+            
+            // position: relative
             z-index: 1
-            &::before
-                position: absolute
-                z-index: -1
-                content: url(../img/Group_4-1.png)
-                width: 40px
-                height: 40px
-                background: #E7EBF0
-                border-radius: 40px
-                top: 21px
-                left: 2px
+            // &::before
+            //     position: absolute
+            //     z-index: -1
+            //     content: ""
+            //     width: 40px
+            //     height: 40px
+            //     background: #E7EBF0
+            //     border-radius: 40px
+            //     top: 21px
+            //     left: 2px
+            //     background-position: 50% 0%
+        //     &::before   код игоря
+        //         position: absolute
+        //         z-index: -1
+        //         content: url(../img/Group_4-1.png)
+        //         width: 40px
+        //         height: 40px
+        //         background: #E7EBF0
+        //         border-radius: 40px
+        //         top: 21px
+        //         left: 2px
+        //         background-position: 50% 0%
+        // &:nth-child(2) 
+        //     &:before
+        //         content: url(../img/Group_2.png) код игоря конец
+        
+            // &:last-child
+            //     &::before
+            //         position: absolute
+            //         z-index: -1
+            //         width: 40px
+            //         height: 40px
+            //         background: #E7EBF0
+            //         border-radius: 40px
+            //         top: 21px
+            //         left: 2px
+            //         content: url(../img/Group_2.png)
             // &::after
             //     content: "!"
         &_wrapper
+            
             // .spoiler_icons
             //     margin-right: 24px
             //     padding: 10px
         p
             margin-top: 0
+            padding-left: 85px
      
         &_item
             padding-left: 79px
             padding-bottom: 16px
+        &-wrapper__item
+            &::after 
+                top: 23px
 
     .feed
         .devider
@@ -169,56 +218,93 @@
     .carousel
         display: none
     .carousel-desktop
+        display: block
         background: linear-gradient(111.04deg, #E2E2E2 0.39%, rgba(255, 255, 255, 0) 86.46%)
+        &_img
+            margin: 0 auto
         .devider
             display: block
             margin-top: 75px
         h2
             margin-top: 22px
+        &_logo
+            // width: 436px
+            // height: 230px
+            // margin: 0
+            margin: 0 auto
+            margin-top: 45px
+
+            // drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.16)
+        &_descr
+            margin-top: 22.5px
+            
         &_wrapper
             width: 800px
             margin-top: 29px
-            
             margin: 0 auto
-            column-count: 3
-            column-gap: 0
-            break-inside: avoid
-            // .line-1
-            //     display: inline-block
-            // .line-2
-            //     display: inline-block
+            margin-top: 69px
+            // position: relative
         &_item
-            width: 176px
-        &_img
-            margin: 0 auto
-            width: 56px
-            // height: 72px
-        &_descr
+            width: 199px
+            // position: absolute
+            // left: 0 
+            // top: 0
+            // transform-origin: 50% 200% 0
+            // text-align: center /* Выравнивание содержимого по-центру */
+            display: inline-block
+            // vertical-align: middle
+            &:nth-child(1)
+                transform: translateX(158px)
+                width: 176px
+            &:nth-child(2)
+                transform: translateX(267px)
+                width: 179px
+            &:nth-child(3)
+                transform: translate(272px,299px)
+                width: 178px  
+            &:nth-child(5)
+                transform: translate(447px,-92px)
+                width: 199px
+            &:nth-child(6)
+                transform: translate(-45px,-73px)
+                width: 178px
+            &:nth-child(7)
+                transform: translate(-424px,-305px)  
+                width: 186px
+                 
 
+        // &_img
+        //     margin: 0 auto
+        //     width: 56px
+        //     // height: 72px
 
-        .container
-            
-            position: relative
-            overflow: hidden
-            &:before
-                content: ""
-                position: absolute
-                z-index: -1
-                background: url('/img/pattern_l.png') (left center/auto) no-repeat
-                background-size: 442px 447px
-                transform: rotate(-8.27deg)
-                width: 442.06px
-                height: 447.48px
-                // left: 361.78px
-                // top: 490px
-                bottom: -43px
+        // .container
+        //     position: relative
+        //     overflow: hidden
+        //     &:before
+        //         content: ""
+        //         position: absolute
+        //         z-index: -1
+        //         background: url('/img/pattern_l.png') (left center/auto) no-repeat
+        //         background-size: 442px 447px
+        //         transform: rotate(-8.27deg)
+        //         width: 442.06px
+        //         height: 447.48px
+        //         // left: 361.78px
+        //         // top: 490px
+        //         bottom: -43px
         
     .spoiler
         padding-top: 103px
+        padding-right: 167px
         h2
             margin-bottom: 10px
         .devider
             margin-top: 0
+        // &_icons
+        //     width: 40px
+        //     height: 40px
+        //     padding: 0
     .feed
         background: #F5F5F5
         padding-top: 101px

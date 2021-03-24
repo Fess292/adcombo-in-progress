@@ -54,11 +54,17 @@
     //     top: -7px
     //     position: absolute
 
+.bx-pager-link
+    width: 8px
+    height: 8px
+    margin: 0px 8px
 .carousel
     padding-bottom: 66px
     &_subheader
         height: 203px
-        
+    // .bx-wrapper
+    //     img
+    //         margin: 50px auto    
     &_logo
         padding-top: 30px
         margin: 0 auto
@@ -70,28 +76,76 @@
         // &:last-child
         //     display: none
         img
+            
             margin-top: 50px
+// .bx-wrapper
+//     border: none
+//     box-shadow: none
+//     .bx-pager
+//         .bx-default-pager 
+//             a
+//                 width: 8px
+//                 height: 8px
+//                 margin: 0px 8px
+.bx-wrapper
+    position: relative
+    border: none
+    box-shadow: none
+    .bx-controls-direction
+        position: absolute
+        left: 55px
+        right: 55px
+        bottom: -32px
+        text-align: right
+        // a
+        //     margin-top: 46px
+    // .bx-controls
+    //     position: absolute
+    //     top: 0
+    //     left: 0
+    //     right: 0
+    //     bottom: 0
+    //     z-index: 100
+    .bx-prev 
+        // position: absolute
+        float: left
+        background: url(../icons/arrow_left.png) 0 0 no-repeat
+        display: inline-block
+        // width: 30px
+        // height: 30px
+        margin: 0 5px
+        overflow: hidden
+        // z-index: 1000
+    .bx-next 
+        background: url(../icons/arrow_right.png) 0 0 no-repeat  
+        display: inline-block
+        // width: 30px
+        // height: 30px
+        margin: 0 5px
+        overflow: hidden
+        // text-indent: 999px
+        // z-index: 1000
 
-    .slick-dots
+    // .slick-dots
         
-        li         
-            button:before
-                font-size: 38px
+    //     li         
+    //         button:before
+    //             font-size: 38px
             
-    .slick-prev, .slick-next, button, .slick-arrow
-        top: 91.5%
-        transition: none
+    // .slick-prev, .slick-next, button, .slick-arrow
+    //     top: 91.5%
+    //     transition: none
 
-    .slick-prev
-        left: 10%
-        background: url("../icons/arrow_left.png") no-repeat
-        &:before
-            content:'' !important
+    // .slick-prev
+    //     left: 10%
+    //     background: url("../icons/arrow_left.png") no-repeat
+    //     &:before
+    //         content:'' !important
             
-    .slick-next
-        right: 14px
-        top: 1px
-        background: url("../icons/arrow_right.png") no-repeat
+    // .slick-next
+    //     right: 14px
+    //     top: 1px
+    //     background: url("../icons/arrow_right.png") no-repeat
 
 
 .spoiler
@@ -99,6 +153,8 @@
     background: #F8FBFF
     h2,p 
         margin-top: 16px
+    p
+        line-height: 24px
     &-wrapper
         margin-top: 31px
         
@@ -112,12 +168,13 @@
             padding-right: 35px
     &-wrapper__item
         position: relative
+        border-bottom: 1px solid #E7EBF0 
         .spoiler_icons
             margin-right: 24px
             padding: 10px    
         &::after
             content: url(../img/arrow_down.png)
-            font-size: 18px
+            // font-size: 18px
             margin-left: 4px
             position: absolute
             right: 0
@@ -127,9 +184,11 @@
 
 .active 
     display: block
+    
 .active-arrow
     display: block
     color: #00C368
+    border: none
     &::after 
         content: url(../img/arrow_up.png)            
     // .ui-accordion-header.ui-state-active
@@ -181,7 +240,7 @@
                 position: absolute
                 top: 4%
                 right: 8%
-                transform: translate(-4%,-8%)
+                // transform: translate(-4%,-8%)
                 transform: rotate(180deg)
         
     &_item
