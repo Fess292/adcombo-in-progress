@@ -114,6 +114,7 @@
   position: relative;
   border: none;
   box-shadow: none;
+  background: none;
 }
 
 * .bx-wrapper .bx-controls-direction {
